@@ -48,6 +48,8 @@ const Projects = () => {
             <div 
               key={index}
               className={`group relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center transition-all duration-700 ease-out`}
+              data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+              data-aos-delay={index * 100}
               style={{
                 opacity: showAll || index < 2 ? (hoveredProject === index ? 1 : 0.9) : 0,
                 transform: `translateY(${showAll || index < 2 ? '0' : '4rem'})`,
@@ -109,7 +111,7 @@ const Projects = () => {
               onClick={() => setShowAll(!showAll)}
               className="px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-lg text-primary-content hover:bg-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
             >
-              {showAll ? 'Show Less' : 'See More'}
+              {showAll ? 'Show Less' : 'See More Projects'}
             </button>
           </div>
         )}

@@ -11,11 +11,28 @@ const About = () => {
   ];
 
   return (
-    <section className="py-16 min-h-screen bg-base-100">
-      <div className="container mx-auto px-4">
+    <section className="py-16 min-h-screen bg-base-100 relative overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full mix-blend-screen animate-float"
+            style={{
+              width: `${Math.random() * 200 + 100}px`,
+              height: `${Math.random() * 200 + 100}px`,
+              background: `radial-gradient(circle at center, ${['rgba(147, 51, 234, 0.15)', 'rgba(59, 130, 246, 0.15)', 'rgba(16, 185, 129, 0.15)'][i % 3]} 0%, transparent 70%)`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${i * 2}s`,
+              animationDuration: `${Math.random() * 10 + 20}s`
+            }}
+          />
+        ))}
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="w-full md:w-1/2 space-y-6">
-            <h2 className="text-5xl font-extrabold text-primary-content bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          <div className="w-full md:w-1/2 space-y-6" data-aos="fade-up" data-aos-duration="1000">
+            <h2 className="text-5xl font-extrabold text-primary-content bg-clip-text bg-gradient-to-r from-primary to-secondary">
               I am Tech Monarch🤴
             </h2>
             <p className="text-xl font-medium text-gray-200 leading-relaxed">
@@ -26,7 +43,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2" data-aos="fade-up" data-aos-delay="200">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
               {images.map((item, index) => (
                 <div 

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 const Skills = () => {
   const [scrollPositions, setScrollPositions] = useState({});
   const [isHovered, setIsHovered] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
   const languages = [
     {
@@ -70,7 +71,7 @@ const Skills = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4 space-y-12">
-        {languages.map((category, index) => (
+        {languages.slice(0, showMore ? languages.length : 1).map((category, index) => (
           <div 
             key={index} 
             className="backdrop-blur-sm bg-base-100/30 rounded-xl shadow-xl p-6 overflow-hidden"
@@ -102,10 +103,30 @@ const Skills = () => {
                     )}
                   </div>
                 ))}
+        {languages.length > 1 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-lg text-primary-content hover:bg-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
+            >
+              {showMore ? 'Show Less' : 'See More Skills'}
+            </button>
+          </div>
+        )}
               </div>
             </div>
           </div>
         ))}
+        {languages.length > 1 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowMore(!showMore)}
+              className="px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-lg text-primary-content hover:bg-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
+            >
+              {showMore ? 'Show Less' : 'See More Skills'}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
