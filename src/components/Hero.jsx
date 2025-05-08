@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className="min-h-screen bg-base-100 text-base-content">
       <nav className="py-6 px-4 md:px-6 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-        <div className="text-xl font-semibold text-primary-content">Tech Monarch</div>
+        <div className="text-xl font-semibold text-primary-content">Tech Monarch 🤴</div>
         <div className="flex space-x-4">
           <a href="#education" className="text-base-content hover:text-primary-content transition-colors">education</a>
           <a href="#experience" className="text-base-content hover:text-primary-content transition-colors">experience</a>

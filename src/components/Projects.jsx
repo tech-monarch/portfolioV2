@@ -6,8 +6,8 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Lumina',
-      description: 'A modern lighting control system with intuitive interface and smart scheduling features.',
+      title: 'LuminaAI',
+      description: 'An AI chatbot designed to be empathetic and give human-like responses.',
       image: '/projects/Lumina.png',
       tags: ['React', 'Node.js', 'IoT'],
       link: '#',
@@ -22,7 +22,7 @@ const Projects = () => {
     },
     {
       title: 'PXXL',
-      description: 'Digital art creation platform with pixel-perfect editing capabilities and collaborative features.',
+      description: 'Pxxl Space, a free webhosting provider.',
       image: '/projects/pxxl.png',
       tags: ['React', 'Canvas API', 'WebSocket'],
       link: '#',
@@ -43,18 +43,26 @@ const Projects = () => {
         <h2 className="text-4xl font-bold text-primary-content mb-12 text-center">
           Featured Projects
         </h2>
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-24 transition-all duration-700 ease-in-out">
           {projects.slice(0, showAll ? projects.length : 2).map((project, index) => (
             <div 
               key={index}
-              className={`group relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}
+              className={`group relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center transition-all duration-700 ease-out`}
+              style={{
+                opacity: showAll || index < 2 ? (hoveredProject === index ? 1 : 0.9) : 0,
+                transform: `translateY(${showAll || index < 2 ? '0' : '4rem'})`,
+                transitionDelay: `${index * 200}ms`,
+                pointerEvents: showAll || index < 2 ? 'auto' : 'none'
+              }}
               onMouseEnter={() => setHoveredProject(index)}
               onMouseLeave={() => setHoveredProject(null)}
             >
               <div className="w-full md:w-7/12 overflow-hidden rounded-xl">
                 <div 
                   className="aspect-video w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                  style={{ backgroundImage: `url(${project.image})` }}
+                  style={{
+                opacity: hoveredProject === index ? 1 : 0.9,
+                transform: `translateY(${hoveredProject === index ? '0' : '0.5rem'})`, backgroundImage: `url(${project.image})` }}
                 />
               </div>
               <div className="w-full md:w-5/12 p-6 space-y-4">
@@ -99,7 +107,7 @@ const Projects = () => {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-lg text-primary-content hover:bg-primary/30 transition-colors duration-300"
+              className="px-6 py-3 bg-primary/20 backdrop-blur-sm rounded-lg text-primary-content hover:bg-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-lg transform"
             >
               {showAll ? 'Show Less' : 'See More'}
             </button>
