@@ -1,22 +1,38 @@
-@keyframes float {
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
+@keyframes gradientShift {
   0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.5;
+    background-position: 0% 50%;
   }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-    opacity: 0.8;
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-    opacity: 0.6;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.5;
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
 .animate-float {
-  animation: float linear infinite;
+  animation: float 6s ease-in-out infinite;
 }
