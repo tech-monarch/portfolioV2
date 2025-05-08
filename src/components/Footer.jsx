@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+import { FaGithub, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { MdEmail, MdPhone } from 'react-icons/md';
 import { SiDiscord } from 'react-icons/si';
 
 const Footer = () => {
@@ -12,37 +12,48 @@ const Footer = () => {
             Let's talk about how we can work together to build something amazing.
           </p>
           
-          <div className="flex space-x-8">
-            <a
-              href="https://github.com/tech-monarch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
-            >
-              <FaGithub size={28} />
-            </a>
-            <a
-              href="https://linkedin.com/in/tech-monarch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
-            >
-              <FaLinkedin size={28} />
-            </a>
-            <a
-              href="https://discord.com/users/tech-monarch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
-            >
-              <SiDiscord size={28} />
-            </a>
-            <a
-              href="mailto:tech-monarch@email.com"
-              className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
-            >
-              <MdEmail size={28} />
-            </a>
+          <div className="flex flex-col items-center space-y-6">
+            <div className="flex space-x-8">
+              <a
+                href="https://github.com/tech-monarch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
+              >
+                <FaGithub size={28} />
+              </a>
+              <a
+                href="https://instagram.com/still_odia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
+              >
+                <FaInstagram size={28} />
+              </a>
+              <a
+                href="https://discord.com/users/tech-monarch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
+              >
+                <SiDiscord size={28} />
+              </a>
+            </div>
+            
+            <div className="flex flex-col items-center space-y-3 text-base-content/80">
+              <div className="flex items-center space-x-2">
+                <MdEmail size={20} />
+                <a href="mailto:om2918440@gmail.com" className="hover:text-primary-content transition-colors">
+                  om2918440@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaWhatsapp size={20} />
+                <a href="https://wa.me/2347043427233" target="_blank" rel="noopener noreferrer" className="hover:text-primary-content transition-colors">
+                  +234 704 342 7233
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

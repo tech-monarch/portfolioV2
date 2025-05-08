@@ -15,7 +15,7 @@ const Skills = () => {
         { name: 'AI Engineering', icon: <TbBrain className="text-purple-500" />, status: '(in progress)' },
         { name: 'Machine Learning', icon: <TbBrain className="text-purple-500" /> },
         { name: 'Frontend Development', icon: <FaReact className="text-cyan-400" /> },
-        { name: 'Full-Stack Development', icon: <FaNodeJs className="text-green-500" />, status: '(basic backend)' },
+        { name: 'Full-Stack Development', icon: <FaNodeJs className="text-green-500" /> },
         { name: 'Creative Problem Solving', icon: <TbBrain className="text-purple-500" /> },
         { name: '3D Web Integration', icon: <SiThreedotjs className="text-gray-300" /> },
       ]

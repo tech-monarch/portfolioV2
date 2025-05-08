@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { SiDiscord } from 'react-icons/si';
 import Skills from './Skills';
@@ -18,13 +18,13 @@ const Hero = () => {
           <a href="https://github.com/tech-monarch" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
             <FaGithub size={22} />
           </a>
-          <a href="https://linkedin.com/in/tech-monarch" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-            <FaLinkedin size={22} />
+          <a href="https://instagram.com/still_odia" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+            <FaInstagram size={22} />
           </a>
           <a href="https://discord.com/users/tech-monarch" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
             <SiDiscord size={22} />
           </a>
-          <a href="mailto:tech-monarch@email.com" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+          <a href="mailto:om2918440@gmail.com" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
             <MdEmail size={22} />
           </a>
         </div>

@@ -9,31 +9,45 @@ const Projects = () => {
       title: 'LuminaAI',
       description: 'An AI chatbot designed to be empathetic and give human-like responses.',
       image: '/projects/Lumina.png',
-      tags: ['React', 'Node.js', 'IoT'],
-      link: '#',
+      tags: ['React', 'Node.js', 'AI'],
+      link: 'https://lumina-smoky.vercel.app',
       featured: true
+    },
+    {
+      title: 'Otal',
+      description: 'A FORXEX academy website.',
+      image: '/projects/otal.png',
+      tags: ['HTML', 'CSS', 'PHP', 'Full Stack'],
+      link: 'https://otal.ng'
+    },
+    {
+      title: 'CSC 200 Project',
+      description: 'An educational project showcasing computer science concepts and implementations.',
+      image: '/projects/csc-200.png',
+      tags: ['HTML', 'JavaScript', 'Education'],
+      link: 'https://csc-200-lv-group-09.vercel.app'
     },
     {
       title: 'Discover Niger',
       description: 'An interactive platform showcasing the beauty and culture of Niger through immersive experiences.',
       image: '/projects/discover-niger.png',
-      tags: ['React', 'Tailwind', 'JavaScript'],
-      link: '#'
+      tags: ['CSS', 'HTML', 'JavaScript'],
+      link: 'https://discover-niger.vercel.app'
     },
     {
-      title: 'PXXL',
-      description: 'Pxxl Space, a free webhosting provider.',
-      image: '/projects/pxxl.png',
-      tags: ['React', 'Canvas API', 'WebSocket'],
-      link: '#',
+      title: 'Restaurant App',
+      description: 'A modern restaurant website with an elegant menu display and online ordering capabilities.',
+      image: '/projects/restaurant.png',
+      tags: ['HTML', 'CSS', 'Tailwind', 'JavaScript'],
+      link: 'https://restaurant-nine-khaki.vercel.app'
+    },
+    {
+      title: 'Marzive Oracle',
+      description: 'A web application providing oracle and prediction services with an intuitive interface.',
+      image: '/projects/marzive.png',
+      tags: ['React', 'Python', 'Flask', 'API'],
+      link: 'https://marzive-oracle.vercel.app',
       featured: true
-    },
-    {
-      title: 'Robot Car',
-      description: 'Autonomous robot car project with advanced navigation and obstacle avoidance capabilities.',
-      image: '/projects/robot-car.jpg',
-      tags: ['Python', 'ROS', 'Computer Vision'],
-      link: '#'
     }
   ];
 
@@ -84,6 +98,8 @@ const Projects = () => {
                 </div>
                 <a 
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-primary-content hover:text-primary transition-colors duration-300 mt-4"
                 >
                   View Project
