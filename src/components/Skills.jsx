@@ -70,11 +70,13 @@ const Skills = () => {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4 space-y-12">
+      <div className="container mx-auto px-4 space-y-12" data-aos="fade-up">
         {languages.slice(0, showMore ? languages.length : 1).map((category, index) => (
           <div 
             key={index} 
             className="backdrop-blur-sm bg-base-100/30 rounded-xl shadow-xl p-6 overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
             onMouseEnter={() => setIsHovered(index)}
             onMouseLeave={() => setIsHovered(null)}
           >
@@ -95,6 +97,8 @@ const Skills = () => {
                   <div 
                     key={skillIndex} 
                     className="flex-shrink-0 w-48 p-4 backdrop-blur-sm bg-base-300/40 rounded-lg flex flex-col items-center hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+                    data-aos="zoom-in"
+                    data-aos-delay={skillIndex * 100}
                   >
                     <div className="text-3xl text-primary mb-2">{skill.icon}</div>
                     <h3 className="text-lg font-semibold text-primary-content text-center">{skill.name}</h3>

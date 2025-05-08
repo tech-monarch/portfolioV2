@@ -47,10 +47,10 @@ const Hero = () => {
       Download CV
     </a>
     <a
-      href="#experience"
+      href="#contact-me"
       className="btn btn-outline text-primary-content hover:bg-primary-content hover:text-primary transition-colors"
     >
-      See experiences
+      Contact Me
     </a>
   </div>
 </div>
