@@ -69,6 +69,12 @@ const Footer = () => {
                   +234 704 342 7233
                 </a>
               </div>
+              <div className="flex items-center space-x-2">
+                <MdPhone size={20} />
+                <a href="tel:+2347043427233" className="hover:text-primary-content transition-colors">
+                  +234 704 342 7233
+                </a>
+              </div>
             </div>
           </div>
         </div>
