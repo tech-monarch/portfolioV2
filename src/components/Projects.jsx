@@ -54,7 +54,7 @@ const Projects = () => {
       link: 'https://discover-niger.vercel.app'
     },
     {
-      title: 'Restaurant App',
+      title: 'Restaurant Website',
       description: 'A modern restaurant website with an elegant menu display and online ordering capabilities.',
       image: '/projects/restaurant.png',
       tags: ['HTML', 'CSS', 'Tailwind', 'JavaScript'],
