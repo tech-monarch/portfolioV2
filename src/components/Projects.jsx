@@ -81,7 +81,7 @@ const Projects = () => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Helmet>
-      <section className="py-16 min-h-screen">
+      <section id="projects" className="py-16 min-h-screen">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-primary-content mb-12 text-center">
           Featured Projects

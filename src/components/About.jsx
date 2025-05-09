@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <section className="py-16 min-h-screen bg-base-100">
+    <section id="about" className="py-16 min-h-screen bg-base-100">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 space-y-6" data-aos="fade-up" data-aos-duration="1000">
