@@ -21,7 +21,7 @@ const Hero = () => {
           <a href="https://instagram.com/still_odia" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
             <FaInstagram size={22} />
           </a>
-          <a href="https://discord.com/users/tech-monarch" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+          <a href="https://discord.com/users/tech_monarch" target="_blank" rel="noopener noreferrer" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
             <SiDiscord size={22} />
           </a>
           <a href="mailto:om2918440@gmail.com" className="text-base-content hover:text-primary-content transition-all duration-300 hover:scale-110 hover:-translate-y-1">
@@ -47,7 +47,7 @@ const Hero = () => {
       Download CV
     </a>
     <a
-      href="#contact-me"
+      href="#footer"
       className="btn btn-outline text-primary-content hover:bg-primary-content hover:text-primary transition-colors"
     >
       Contact Me

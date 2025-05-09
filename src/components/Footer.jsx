@@ -1,10 +1,10 @@
-import { FaGithub, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaWhatsapp, FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import { SiDiscord } from 'react-icons/si';
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 py-12">
+    <footer id="footer" className="bg-base-200 py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center space-y-8">
           <h2 className="text-3xl font-bold text-primary-content">Get in Touch.</h2>
@@ -31,12 +31,28 @@ const Footer = () => {
                 <FaInstagram size={28} />
               </a>
               <a
-                href="https://discord.com/users/tech-monarch"
+                href="https://discord.com/users/tech_monarch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
               >
                 <SiDiscord size={28} />
+              </a>
+              <a
+                href="https://x.com/_Tech_Monarch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
+              >
+                <FaTwitter size={28} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@tech.monarch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-base-content hover:text-primary-content transition-colors transform hover:scale-110"
+              >
+                <FaTiktok size={28} />
               </a>
             </div>
             

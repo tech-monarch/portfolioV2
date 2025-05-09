@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
+const projectsMetadata = {
+  title: 'Projects | Omijeh David Odianonsen - Software Developer',
+  description: 'Explore my portfolio of innovative projects including AI chatbots, FOREX academy websites, and interactive educational platforms.',
+  keywords: 'LuminaAI, Otal, CSC 200 Project, Marzive Oracle, Discover Niger, Restaurant App, React, Node.js, AI, Full Stack',
+  canonical: 'https://omijeh-david.vercel.app/projects'
+};
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [showAll, setShowAll] = useState(false);
+
+  // Add SEO metadata
+  const { title, description, keywords, canonical } = projectsMetadata;
 
   const projects = [
     {
@@ -15,7 +26,7 @@ const Projects = () => {
     },
     {
       title: 'Otal',
-      description: 'A FORXEX academy website.',
+      description: 'A FOREX academy website.',
       image: '/projects/otal.png',
       tags: ['HTML', 'CSS', 'PHP', 'Full Stack'],
       link: 'https://otal.ng'
@@ -26,6 +37,14 @@ const Projects = () => {
       image: '/projects/csc-200.png',
       tags: ['HTML', 'JavaScript', 'Education'],
       link: 'https://csc-200-lv-group-09.vercel.app'
+    },
+    {
+      title: 'Marzive Oracle',
+      description: 'A web application providing oracle and prediction services with an intuitive interface.',
+      image: '/projects/marzive.png',
+      tags: ['React', 'Python', 'Flask', 'API'],
+      link: 'https://marzive-oracle.vercel.app',
+      featured: true
     },
     {
       title: 'Discover Niger',
@@ -40,19 +59,29 @@ const Projects = () => {
       image: '/projects/restaurant.png',
       tags: ['HTML', 'CSS', 'Tailwind', 'JavaScript'],
       link: 'https://restaurant-nine-khaki.vercel.app'
-    },
-    {
-      title: 'Marzive Oracle',
-      description: 'A web application providing oracle and prediction services with an intuitive interface.',
-      image: '/projects/marzive.png',
-      tags: ['React', 'Python', 'Flask', 'API'],
-      link: 'https://marzive-oracle.vercel.app',
-      featured: true
     }
   ];
 
   return (
-    <section className="py-16 min-h-screen">
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <link rel="canonical" href={canonical} />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Helmet>
+      <section className="py-16 min-h-screen">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-primary-content mb-12 text-center">
           Featured Projects
@@ -133,6 +162,7 @@ const Projects = () => {
         )}
       </div>
     </section>
+    </>
   );
 };
 
