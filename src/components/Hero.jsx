@@ -48,7 +48,11 @@ const Hero = () => {
     </a>
     <a
       href="#footer"
-      className="btn btn-outline text-primary-content hover:bg-primary-content hover:text-primary transition-colors"
+      className="btn btn-outline text-primary-content hover:bg-primary-content hover:text-primary transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+      onClick={(e) => {
+        e.preventDefault();
+        document.querySelector('#footer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }}
     >
       Contact Me
     </a>
